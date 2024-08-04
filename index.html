@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru-KZ">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Генератор Luna Pass токенов</title>
+
+	<link rel="stylesheet" href="index.css">
+
+	<script type="module" src="index.js"></script>
+</head>
+
+<body>
+	<header>
+		<h1 id="top">Генератор Luna Pass токенов</h1>
+	</header>
+
+	<fieldset>
+		<legend>Данные для генерации токена</legend>
+		<ul>
+			<li>
+				<label for="iat">Время выпуска токена (<code>iat</code>): </label>
+				<div>
+					<input type="datetime-local" required name="iat" id="iat">
+				</div>
+			</li>
+			<li>
+				Параметр <code>isOk</code>:
+				<div>
+					<label for="false"><code>false</code></label>
+					<input type="radio" id="false" name="isOk" value="false" required>
+				</div>
+				<div>
+					<label for="true"><code>true</code></label>
+					<input type="radio" id="true" name="isOk" value="true" required checked>
+				</div>
+			</li>
+			<li>
+				<label for="bestshot">Фотография (должно быть видно лицо): </label>
+				<div>
+					<input type="file" name="bestshot" id="bestshot" accept=".jpeg,.jpg,.png" capture="user"
+						required>
+				</div>
+			</li>
+			<li>
+				<label for="jti">ID токена (<code>jti</code>): </label>
+				<div>
+					<input type="text" id="jti" name="jti" required minlength="5">
+				</div>
+			</li>
+			<li>
+				<label for="secret">Секрет (для подписи токена): </label>
+				<div>
+					<input type="text" name="secret" id="secret" required minlength="5">
+				</div>
+			</li>
+		</ul>
+	</fieldset>
+	<button type="button" id="submit-data">Сгенерировать токен</button>
+
+	<div class="generated-token">
+		<p>Ниже появится сгенерированный токен.</p>
+	</div>
+
+	<footer>
+		<a href="#top">Начало страницы</a>
+	</footer>
+</body>
+
+</html>

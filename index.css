@@ -1,0 +1,31 @@
+html {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+	width: 60%;
+	max-width: 1000px;
+	min-width: 480px;
+	margin: 0 auto;
+}
+
+code.jwt {
+	width: 60%;
+	overflow-wrap: break-word;
+}
+
+ul {
+	list-style: outside;
+}
+
+/* input:invalid {
+	color: red;
+}
+
+input:valid {
+	color: green;
+} */
+
+.validation-error {
+	color: red;
+}
